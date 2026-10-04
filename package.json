@@ -12,7 +12,8 @@
     "start": "strapi start",
     "strapi": "strapi",
     "upgrade": "npx @strapi/upgrade latest",
-    "upgrade:dry": "npx @strapi/upgrade latest --dry"
+    "upgrade:dry": "npx @strapi/upgrade latest --dry",
+    "build:image:push": "docker buildx build --platform linux/amd64 -t 69-s3-app . && docker tag 69-s3-app ghcr.io/en-tanawat/69-s3-app:latest && docker push ghcr.io/en-tanawat/69-s3-app:latest"
   },
   "dependencies": {
     "@strapi/database": "5.56.0",
@@ -31,7 +32,7 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "typescript": "^5"
+    "typescript": "^6.0.3"
   },
   "engines": {
     "node": ">=20.0.0 <=26.x.x",

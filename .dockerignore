@@ -1,0 +1,11 @@
+node_modules
+.tmp
+.strapi
+dist
+build
+.git
+.env
+*.log
+npm-debug.log*
+.DS_Store
+Thumbs.db
