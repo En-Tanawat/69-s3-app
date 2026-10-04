@@ -23,7 +23,7 @@ WORKDIR /opt/
 COPY package.json package-lock.json ./
 
 # Install dependencies (including devDependencies for TypeScript & Admin build)
-RUN npm config set fetch-retry-maxtimeout 600000 -g && npm ci
+RUN npm config set fetch-retry-maxtimeout 600000 -g && npm install
 
 ENV PATH=/opt/node_modules/.bin:$PATH
 
@@ -53,7 +53,7 @@ WORKDIR /opt/app
 COPY --from=build /opt/app ./
 
 # Create SQLite database folder and ensure non-root permissions
-RUN mkdir -p .tmp && chown -R node:node /opt/app /opt/node_modules
+RUN mkdir -p .tmp public/uploads && chown -R node:node .tmp public/uploads
 
 USER node
 

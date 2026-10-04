@@ -21,7 +21,6 @@
     "@strapi/plugin-users-permissions": "5.56.0",
     "@strapi/strapi": "5.56.0",
     "@swc/core": "1.15.47",
-    "@swc/core-win32-x64-msvc": "1.15.47",
     "better-sqlite3": "12.8.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
