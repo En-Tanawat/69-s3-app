@@ -20,8 +20,8 @@
     },
     "mobile": {
       "type": "string",
+      "maxLength": 64,
       "minLength": 10,
-      "maxLength": 10,
       "required": true,
       "unique": true
     },
